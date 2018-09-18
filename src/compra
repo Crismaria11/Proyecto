@@ -1,0 +1,65 @@
+do{
+    compra();
+    String choiceString = bufRead.readLine();
+    int choiceInt = Integer.parseInt(choiceString);
+    if(choiceInt==1){
+        makeSeatReserveTicket(A1, A2, A3, A4, A5,
+                            B1, B2, B3, B4, B5,
+                            C1, C2, C3, C4, C5,
+                            D1, D2, D3, D4, D5,
+                            E1, E2, E3, E4, E5,
+                            F1, F2, F3, F4, F5,
+                            G1, G2, G3, G4, G5
+                            H1, H2, H3, H4, H5);
+    }
+
+
+
+    if(choiceInt==2){
+        try{
+            Cancel(A1, A2, A3, A4, A5,
+                    B1, B2, B3, B4, B5,
+                    C1, C2, C3, C4, C5,
+                    D1, D2, D3, D4, D5,
+                    E1, E2, E3, E4, E5,
+                    F1, F2, F3, F4, F5,
+                    G1, G2, G3, G4, G5
+                    H1, H2, H3, H4, H5);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
+
+
+    if(choiceInt==3){
+        printSeating(A1, A2, A3, A4, A5,
+                    B1, B2, B3, B4, B5,
+                    C1, C2, C3, C4, C5,
+                    D1, D2, D3, D4, D5,
+                    E1, E2, E3, E4, E5,
+                    F1, F2, F3, F4, F5,
+                    G1, G2, G3, G4, G5
+                    H1, H2, H3, H4, H5););
+    }
+    else{
+        System.out.println("Este numero no es valido");
+        }
+    }while(stop!=2);
+        }
+    catch(IOException e){
+        e.printStackTrace();
+    }
+
+public static void compra() {
+        System.out.println(" Menu\n");
+        System.out.println("Ingrese una opcion");
+        System.out.println("1. Comprar ticket");
+        System.out.println("2. Cancelar un ticket");
+        System.out.println("3. Ver asientos");
+        System.out.println("4. Salir");
+        }
+
+
+
+
