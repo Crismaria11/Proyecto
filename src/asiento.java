@@ -8,6 +8,6 @@ public class asiento {
     }
 
     public asiento(String row, int num) {
-        this.set(row, num);
+        this.set();
     }
 }
