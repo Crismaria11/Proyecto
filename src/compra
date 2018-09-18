@@ -86,6 +86,425 @@ public static void makeSeatReserveTicket(compra A1, commpra A2, compra A3, compr
         while(full == 0)
         {
             System.out.println("Escriba el numero de su asiento.");
+            input = bufRead.readLine();
+            if(input.equals("A1"))
+                {
+            if(A1.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    A1.firstName =bufRead.readLine();
+
+                    System.out.println("Apellido:");
+
+                    A1.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    A1.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    A1.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
 
 
-            
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+            }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+            else if(input.equals("A2"))
+                {
+            if(A2.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    A2.firstName =bufRead.readLine();
+
+                    System.out.println("Apellido:");
+
+                    A2.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    A2.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    A2.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
+
+
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+            }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+            else if(input.equals("A3"))
+                {
+            if(A3.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    A3.firstName =bufRead.readLine();
+
+                    System.out.println("Apellido:");
+                    A3.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    A3.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    A3.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
+
+
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+            }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+            else if(input.equals("A4"))
+                {
+            if(A3.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    A4.firstName =bufRead.readLine();
+
+                    System.out.println("Apellido:");
+                    A4.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    A4.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    A4.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
+
+
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+            }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+            else if(input.equals("A5"))
+                {
+            if(A5.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    A5.firstName =bufRead.readLine();
+
+                    System.out.println("Apellido:");
+                    A5.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    A5.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    A5.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
+
+
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+             }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+
+        //B
+            else if(input.equals("B1"))
+                {
+            if(B1.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    B1.firstName =bufRead.readLine();
+
+                    System.out.println("Apellido:");
+                    B1.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    B1.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    B1.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
+
+
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+            }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+            else if(input.equals("B2"))
+                {
+            if(B2.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    B2.firstName =bufRead.readLine();
+
+                    System.out.println("Apellido:");
+                    B2.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    B2.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    B2.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
+
+
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+            }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+            else if(input.equals("B3"))
+            {
+            if(B3.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    B3.firstName = bufRead.readLine();
+
+                    System.out.println("Apellido:");
+                    B3.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    B3.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    B3.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
+
+
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+            }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+            else if(input.equals("B4"))
+                {
+            if(B4.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    B4.firstName = bufRead.readLine();
+
+                    System.out.println("Apellido:");
+                    B4.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    B4.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    B4.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
+
+
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+            }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+            else if(input.equals("B5"))
+                {
+            if(B5.firstName == null)
+            {
+                System.out.println("Escriba su nombre, apellido, correo y contrasena");
+
+                System.out.println("Nombre:");
+                    B5.firstName =bufRead.readLine();
+
+                    System.out.println("Apellido:");
+                    B5.lastName = bufRead.readLine();
+
+                    System.out.println("Correo:");
+                    B5.correo = bufRead.readLine();
+
+                    System.out.println("Contrasena:");
+                    B5.contrasena = bufRead.readLine();
+
+                    System.out.println("Desea otro ticket, si es asi presione 1");
+                    String enterType = bufRead.readLine();
+                    int continueReserve = Integer.parseInt(enterType);
+
+
+                    if(continueReserve == 1)
+                    {
+                        System.out.println("Asiento Extra:");
+                        }
+                        else
+                        {
+                            System.out.println("Se agradece su compra.");
+                            full++;
+                        }
+            }
+
+            else
+            {
+                System.out.println("The seat has been booked, please choose another seat.");
+            }
+                }
+
+
+
+
+
+
+
+
+        }
