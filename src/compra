@@ -60,6 +60,32 @@ public static void compra() {
         System.out.println("4. Salir");
         }
 
+public static void makeSeatReserveTicket(compra A1, commpra A2, compra A3, compra A4, compra A5,
+                                        compra B1, compra B2, compra B3, compra B4, compra B5,
+                                        compra C1, compra C2, compra C3, compra C4, compra C5,
+                                        compra D1, compra D2, compra D3, compra D4, compra D5,
+                                        compra E1, compra E2, compra E3, compra E4, compra E5,
+                                        compra F1, compra F2, compra F3, compra F4, compra F5,
+                                        compra G1, compra G2, compra G3, compra G4, compra G5,
+                                        compra F1, compra F2, compra F3, compra F4, compra F5) {
+    InputStreamReader inStream = new InputStreamReader(System.in);
+    BufferedReader bufRead = new BufferedReader(inStream);
+
+    System.out.println("Seleccione un asiento");
+
+    try{
+        String enterType1 = bufRead.readLine();
+        int flightInput = Integer.parseInt(enterType1);
 
 
+        if(flightInput == 1)
+        {
+            String input;
+            int full = 0;
 
+        while(full == 0)
+        {
+            System.out.println("Escriba el numero de su asiento.");
+
+
+            
