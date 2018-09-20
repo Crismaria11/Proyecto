@@ -1,97 +1,98 @@
 import java.io.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import sample.compra;
 
 class Sala {
     public static void main(String[] args) {
         InputStreamReader inStream = new InputStreamReader(System.in);
         BufferedReader bufRead = new BufferedReader(inStream);
-        asiento A1 = new asiento(null, 0);
+        asiento A1 = new asiento(null, 0, null, null, null, null);
 
-        asiento A2 = new asiento(null, 0);
+        asiento A2 = new asiento(null, 0, null, null, null, null);
 
-        asiento A3 = new asiento(null, 0);
+        asiento A3 = new asiento(null, 0, null, null, null, null);
 
-        asiento A4 = new asiento(null, 0);
+        asiento A4 = new asiento(null, 0, null, null, null, null);
 
-        asiento A5 = new asiento(null, 0);
-
-
-        asiento B1 = new asiento(null, 0);
-
-        asiento B2 = new asiento(null, 0);
-
-        asiento B3 = new asiento(null, 0);
-
-        asiento B4 = new asiento(null, 0);
-
-        asiento B5 = new asiento(null, 0);
+        asiento A5 = new asiento(null, 0, null, null, null, null);
 
 
-        asiento C1 = new asiento(null, 0);
+        asiento B1 = new asiento(null, 0, null, null, null, null);
 
-        asiento C2 = new asiento(null, 0);
+        asiento B2 = new asiento(null, 0, null, null, null, null);
 
-        asiento C3 = new asiento(null, 0);
+        asiento B3 = new asiento(null, 0, null, null, null, null);
 
-        asiento C4 = new asiento(null, 0);
+        asiento B4 = new asiento(null, 0, null, null, null, null);
 
-        asiento C5 = new asiento(null, 0);
-
-
-        asiento D1 = new asiento(null, 0);
-
-        asiento D2 = new asiento(null, 0);
-
-        asiento D3 = new asiento(null, 0);
-
-        asiento D4 = new asiento(null, 0);
-
-        asiento D5 = new asiento(null, 0);
+        asiento B5 = new asiento(null, 0, null, null, null, null);
 
 
-        asiento E1 = new asiento(null, 0);
+        asiento C1 = new asiento(null, 0, null, null, null, null);
 
-        asiento E2 = new asiento(null, 0);
+        asiento C2 = new asiento(null, 0, null, null, null, null);
 
-        asiento E3 = new asiento(null, 0);
+        asiento C3 = new asiento(null, 0, null, null, null, null);
 
-        asiento E4 = new asiento(null, 0);
+        asiento C4 = new asiento(null, 0, null, null, null, null);
 
-        asiento E5 = new asiento(null, 0);
-
-
-        asiento F1 = new asiento(null, 0);
-
-        asiento F2 = new asiento(null, 0);
-
-        asiento F3 = new asiento(null, 0);
-
-        asiento F4 = new asiento(null, 0);
-
-        asiento F5 = new asiento(null, 0);
+        asiento C5 = new asiento(null, 0, null, null, null, null);
 
 
-        asiento G1 = new asiento(null, 0);
+        asiento D1 = new asiento(null, 0, null, null, null, null);
 
-        asiento G2 = new asiento(null, 0);
+        asiento D2 = new asiento(null, 0, null, null, null, null);
 
-        asiento G3 = new asiento(null, 0);
+        asiento D3 = new asiento(null, 0, null, null, null, null);
 
-        asiento G4 = new asiento(null, 0);
+        asiento D4 = new asiento(null, 0, null, null, null, null);
 
-        asiento G5 = new asiento(null, 0);
+        asiento D5 = new asiento(null, 0, null, null, null, null);
 
 
-        asiento H1 = new asiento(null, 0);
+        asiento E1 = new asiento(null, 0, null, null, null, null);
 
-        asiento H2 = new asiento(null, 0);
+        asiento E2 = new asiento(null, 0, null, null, null, null);
 
-        asiento H3 = new asiento(null, 0);
+        asiento E3 = new asiento(null, 0, null, null, null, null);
 
-        asiento H4 = new asiento(null, 0);
+        asiento E4 = new asiento(null, 0, null, null, null, null);
 
-        asiento H5 = new asiento(null, 0);
+        asiento E5 = new asiento(null, 0, null, null, null, null);
+
+
+        asiento F1 = new asiento(null, 0, null, null, null, null);
+
+        asiento F2 = new asiento(null, 0, null, null, null, null);
+
+        asiento F3 = new asiento(null, 0, null, null, null, null);
+
+        asiento F4 = new asiento(null, 0, null, null, null, null);
+
+        asiento F5 = new asiento(null, 0, null, null, null, null);
+
+
+        asiento G1 = new asiento(null, 0, null, null, null, null);
+
+        asiento G2 = new asiento(null, 0, null, null, null, null);
+
+        asiento G3 = new asiento(null, 0, null, null, null, null);
+
+        asiento G4 = new asiento(null, 0, null, null, null, null);
+
+        asiento G5 = new asiento(null, 0, null, null, null, null);
+
+
+        asiento H1 = new asiento(null, 0, null, null, null, null);
+
+        asiento H2 = new asiento(null, 0, null, null, null, null);
+
+        asiento H3 = new asiento(null, 0, null, null, null, null);
+
+        asiento H4 = new asiento(null, 0, null, null, null, null);
+
+        asiento H5 = new asiento(null, 0, null, null, null, null);
 
         System.out.println("Se regresara al menu principal.\n Si desea continuar presione 1 y si desea salir presione 2");
 
