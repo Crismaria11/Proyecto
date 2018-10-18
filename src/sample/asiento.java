@@ -1,3 +1,5 @@
+package sample;
+
 public class asiento {
     public Object firstname;
     String row;
