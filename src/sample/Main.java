@@ -44,15 +44,22 @@ public class Main extends Application {
         primaryStage.setTitle("Sign Up");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
+                baseDeDatos dbAdapter = new baseDeDatos();
+                dbAdapter.connect();
+                dbAdapter.disconne();
+
+            }
+        }
         }
 
 // inicio del programa.
 public static void main(String[] args) {launch(args); }
-        }
+
 
 
 
 public Signup() {
+
             initComponents();
         }
 
@@ -71,3 +78,8 @@ public Signup() {
                 return;
 
 }
+        
+
+
+
+
