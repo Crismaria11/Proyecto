@@ -1,156 +1,129 @@
-import cine.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Main {
-    public static void main(String[] args) {
-        ArrayList<User> User = new ArrayList<cine.User>();
-        ArrayList<Movie> Movie = new ArrayList<cine.Movie>();
+    public static void main(String[] args){
+        ArrayList<User> users = new ArrayList<User>();
+        ArrayList<Movie> movies = new ArrayList<Movie>();
+        ArrayList<TheaterRoom> rooms = new ArrayList<TheaterRoom>();
+
         Boolean continuar = true;
         do {
-            System.out.println("Bienvenido al cine");
-            int menuSelection = 0;
-            System.out.println("Menu: ");
-            System.out.println("1. Agregar usuario");
-            System.out.println("2. Iniciar sesion");
-            System.out.println("3. Salir");
+            System.out.println(menu());
+            Scanner input = new Scanner(System.in);
+            System.out.println("Que opcion desea?: ");
+            String opcion = input.nextLine();
 
-
-            switch (menuSelection) {
-                case 1:
-                    System.out.println("Has seleccionado la opcion 1, agregar nuevo usuario:");
-                    Scanner newish = new Scanner(System.in);
-                    System.out.println("Es Administrador?");
-                    Boolean admin1 = true;
-                    String admin = newish.nextLine();
-                    if (admin.equals("si")) {
-                        admin1 = true;
-                    } else admin1 = false;
-                    System.out.println("Escriba un nombre de usuario");
-                    String username = newish.nextLine();
-                    System.out.println("Escribe tu contrasena");
-                    String password = newish.nextLine();
-                    System.out.println("Escribe un correo");
-                    String email = newish.nextLine();
-
-                    User.add(new User(username, password, email, admin1));
-                    System.out.println(User);
-                    break;
-
-                case 2:
-                    System.out.println("Has seleccionado la opcion 2, iniciar sesion");
-                    Scanner newsisher = new Scanner(System.in);
-                    System.out.println("Ingrese nombre de usuario");
-                    String username1 = newsisher.nextLine();
-                    System.out.println("Ingrese contrasena");
-                    String password1 = newsisher.nextLine();
-                    User userLoggedIn = login(username1,password1, User);
-                    Boolean isAdmin = null;
-                    Boolean isLoggedIn = null;
-                    if (userLoggedIn.getAdmin()) {
-                        isAdmin = true;
-                        isLoggedIn = false;
+            switch (opcion){
+                case "1":
+                    System.out.println("Ha elegido agregar usuario");
+                    System.out.println("Escriba el nombre de usario: ");
+                    String username = input.nextLine();
+                    System.out.println("Escriba la contrasena: ");
+                    String password = input.nextLine();
+                    System.out.println("Escriba el correo: ");
+                    String mail = input.nextLine();
+                    System.out.println("Es adiministrador? si/no");
+                    String respuesta = input.nextLine();
+                    Boolean admin = false;
+                    if (respuesta.equals("si")){
+                        admin = true;
                     }
-                    do {
-                        System.out.println("Menu Admintrador: ");
-                        System.out.println("1. Crear pelicula");
-                        System.out.println("2. Agregar salas");
-                        System.out.println("3. Cerrar Sesion");
-                        int menuSelecAdmin = 0;
-
-                        do {
-                            switch (menuSelecAdmin) {
-                                case 1:
-                                    System.out.println("Has seleccionado la opcion 1, Agregar Pelicula");
-                                    Scanner newAdmin = new Scanner(System.in);
-                                    System.out.println("Escriba el nombre de la pelicula");
-                                    String name = newAdmin.nextLine();
-                                    System.out.println("Escriba la hora de la pelicula");
-                                    int time = newAdmin.nextInt();
-                                    Movie.add(new Movie(name, time));
-                                    System.out.println(Movie);
-                                    break;
-                                case 2:
-                                    System.out.println("Has seleccionado la opcion 2, Agregar Salas");
-                                    Scanner newAdminSalas = new Scanner(System.in);
-                                    System.out.println("Escriba el numero de la sala");
-                                    int numRoom = newAdminSalas.nextInt();
-                                    System.out.println(Movie);
-                                    Scanner newAdminPeliculas = new Scanner(System.in);
-                                    System.out.println("Seleccione una pelicula para estar en la sala");
-                                    String selectedMovie = newAdminPeliculas.nextLine();
-                                    TheaterRoom selectedMovie1 = find(numRoom, Movie);
-                                    selectedMovie1.add(TheaterRoom);
-                                    break;
-                                case 3:
-                                    System.out.println("Has seleccionado la opcion 3, Cerrar Sesion");
-                                    Scanner out = new Scanner(System.in);
-                                    isAdmin = null;
-                                    isLoggedIn = false;
-                                    break;
-
-                            } while (continuar);
-
-
-
-                        } while (continuar);
-                    } else if (!User.isLoggedin.getAdmin()) {
-                    isAdmin = false;
-                    do{
-                        int UserMenu = 0
-                        System.out.println("Menu Usuario");
-                        System.out.println("1. Comprar ticket");
-                        System.out.println("2. Cerrar Sesion");
-                        System.out.println("Escoga una opcion");
-                        switch (UserMenu) {
-                            case 1:
-                                System.out.println("Has seleccionado la opcion 1, Comprar tocket");
-                                Scanner salasUsuario = new Scanner(System.in);
-                                System.out.println(TheaterRoom);
-                                System.out.println("Que sala desea?");
-                                int TheaterRoom = salasUsuario.nextInt();
-                                System.out.println("Que asiento desea?");
-                                System.out.println(seats);
-                                int seats = salasUsuario.nextInt();
-                                Ticket.add(new Ticket(TheaterRoom, ArrayList<seats>));
-                                break;
-                            case 2:
-                                System.out.println("Has seleccionado la opcion 2, Cerrar Sesion");
-                                isAdmin = null;
-                                break
-                        } while (isAdmin);
-                    } while (isLoggedIn);
-                }
-                case 3:
-                    System.out.println("Has elegido la opcion 3, Salir");
-                    continuar = false;
+                    User newUser = new User(username,password,mail,admin);
+                    users.add(newUser);
                     break;
+                case "2":
+                    Boolean isLoggedIn = true;
+                    //do {
+                    System.out.println("He elegido iniciar sesion");
+                    System.out.println("Escriba el nombre de usuario: ");
+                    username = input.nextLine();
+                    System.out.println("Escriba la contrasena");
+                    password = input.nextLine();
+                    User userLoggedIn = login(username,password,users);
+                    System.out.println("Bienvenido\n" +
+                            userLoggedIn);
+                    if (userLoggedIn.getAdmin()){
+                        Boolean seguir = true;
+                        do {
+                            System.out.println(menuAdmin(movies));
+                            System.out.println("Que opcion desea:");
+                            String opcion2 = input.nextLine();
+                            switch (opcion2){
+                                case "1":
+                                    System.out.println("He elegido agregar pelicula:");
+                                    System.out.println("Escriba el nombre de la pelicula: ");
+                                    String movieName = input.nextLine();
+                                    System.out.println("Ha que hora es la pelicula?");
+                                    Integer movieTime = input.nextInt();
+                                    Movie movie = new Movie(movieName,movieTime);
+                                    movies.add(movie);
+                                    System.out.println("Ha agregrado la pelicula:\n" +
+                                            movie);
+                                    break;
+                                case "2":
+                                    System.out.println("Ha elegido agregar sala:");
+                                    System.out.println("Escriba el numero de la sala: ");
+                                    int numRoom = input.nextInt();
+                                    System.out.println("Eliga la pelicula que estara en la sala:");
+                                    System.out.println("Estas son las peliculas:");
+                                    System.out.println(movies);
+                                    int numMovie = input.nextInt();
+                                    Movie movieInRoom = movies.get(numMovie-1);
+                                    TheaterRoom newRoom = new TheaterRoom(numRoom,movieInRoom);
+                                    rooms.add(newRoom);
+                                    System.out.println("Ha agregado la sala:\n" +
+                                            newRoom);
+                                    break;
+                                case "3":
+                                    System.out.println("Ha cerrado sesion");
+                                    seguir = false;
+                                    break;
+                            }
+                        }while (seguir);
+                    } else if (!userLoggedIn.getAdmin()) {
+                        Boolean seguir = true;
+                        do {
+                            System.out.println(menuUsuario());
+                            System.out.println("Que opcion desea?: ");
+                            String opcion2 = input.nextLine();
+                            switch (opcion2){
+                                case "1":
+                                    System.out.println("Ha elegido comprar ticket");
+                                    System.out.println("A que sala quiere entrar?");
+                                    System.out.println(rooms);
+                                    int numRoom = input.nextInt();
+                                    TheaterRoom sala = rooms.get(numRoom-1);
+                                    System.out.println(rooms.get(numRoom-1));
+                                    System.out.println("Escriba la fila del asiento:");
+                                    int row = input.nextInt();
+                                    System.out.println("Escriba la columna del asiento");
+                                    int column = input.nextInt();
+                                    Seats seat = new Seats(row,column);
+                                    userLoggedIn.buyTicket(sala,seat);
+                                    System.out.println("Este es su ticket:"+userLoggedIn.getTicket());
+                            }
+                        }while (seguir);
+                    }
+
+                    //}while (isLoggedIn);
+
             }
 
-        } while (continuar);
+        }while (continuar);
     }
-
-    private static TheaterRoom find(int numRoom, ArrayList<Movie> movie) {
-        for (int name1 = 0; name1 < movie.size(); ++name1) {
-            Movie movieAdmin = movie.get(name1);
-
-            if (movieAdmin.getName().equals(name1)) {
-                if (movieAdmin.getTime().equals(time)) {
-                    return movieAdmin;
-                }
-            }
-        }
-        return null;
+    public static String menu(){
+        String menu ="1. Agregar Usuario\n" +
+                "2. Iniciar Sesion\n" +
+                "3. Salir";
+        return menu;
     }
-
-
     private static User login(String username, String password, ArrayList<User> Usuarios) {
         for (int username12 = 0; username12 < Usuarios.size(); ++username12) {
             User UserAdmin = Usuarios.get(username12);
 
-            if (UserAdmin.getUsername().equals(username12)) {
+            if (UserAdmin.getUsername().equals(username)) {
                 if (UserAdmin.getPassword().equals(password)) {
                     return UserAdmin;
                 }
@@ -158,16 +131,27 @@ public class Main {
         }
         return null;
     }
-    private static Movie find(String name, int time, ArrayList<Movie> Peliculas) {
-        for (int name1 = 0; name1 < Peliculas.size(); ++name1) {
-            Movie movieAdmin = Peliculas.get(name1);
-
-            if (movieAdmin.getName().equals(name1)) {
-                if (movieAdmin.getTime().equals(time)) {
-                    return movieAdmin;
-                }
-            }
+    public static String menuAdmin(ArrayList<Movie> movies){
+        String menu ="";
+        if(movies.isEmpty()){
+            menu="Menu administradores\n" +
+                    "1. Agregar pelicula";
+            return menu;
+        }else if (!movies.isEmpty()){
+            menu += "Menu administradores\n" +
+                    "1. Agregar pelicula\n" +
+                    "2. Agregar sala\n" +
+                    "3. Cerrrar sesion";
+            return menu;
         }
         return null;
     }
+    public static String menuUsuario(){
+        String menu = "Menu usuario\n" +
+                "1. Comprar Ticket\n" +
+                "2. Cerrar Sesion";
+        return menu;
+    }
+
 }
+
