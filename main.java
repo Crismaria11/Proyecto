@@ -3,7 +3,6 @@ import cine.TheaterRoom;
 import cine.User;
 
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -12,7 +11,6 @@ public class Main {
         ArrayList<User> User = new ArrayList<cine.User>();
         ArrayList<Movie> Movie = new ArrayList<cine.Movie>();
         Boolean continuar = true;
-        Scanner Read = new Scanner(System.in);
         do {
             System.out.println("Bienvenido al cine");
             int menuSelection = 0;
@@ -42,6 +40,7 @@ public class Main {
                     User.add(new User(username, password, email, admin1));
                     System.out.println(User);
                     break;
+
                 case 2:
                     System.out.println("Has seleccionado la opcion 2, iniciar sesion");
                     Scanner newsisher = new Scanner(System.in);
@@ -50,16 +49,20 @@ public class Main {
                     System.out.println("Ingrese contrasena");
                     String password1 = newsisher.nextLine();
                     User userLoggedIn = login(username1,password1, User);
-                    assert userLoggedIn != null;
-                    if (!userLoggedIn.getAdmin()) {
-                    } else {
-                        do {
-                            System.out.println("Menu Admintrador: ");
-                            System.out.println("1. Agregar pelicula");
-                            System.out.println("2. Agregar salas");
-                            System.out.println("3. Salir");
-                            int menuSelecAdmin = 0;
+                    Boolean isAdmin = null;
+                    Boolean isLoggedIn = null;
+                    if (userLoggedIn.getAdmin()) {
+                        isAdmin = true;
+                        isLoggedIn = false;
+                    }
+                    do {
+                        System.out.println("Menu Admintrador: ");
+                        System.out.println("1. Crear pelicula");
+                        System.out.println("2. Agregar salas");
+                        System.out.println("3. Cerrar Sesion");
+                        int menuSelecAdmin = 0;
 
+                        do {
                             switch (menuSelecAdmin) {
                                 case 1:
                                     System.out.println("Has seleccionado la opcion 1, Agregar Pelicula");
@@ -78,18 +81,41 @@ public class Main {
                                     int numRoom = newAdminSalas.nextInt();
                                     System.out.println(Movie);
                                     Scanner newAdminPeliculas = new Scanner(System.in);
-                                    System.out.println("Seleccione una pelicula");
+                                    System.out.println("Seleccione una pelicula para estar en la sala");
                                     String selectedMovie = newAdminPeliculas.nextLine();
-                                    TheaterRoom.add(new TheaterRoom(numRoom, Movie));
+                                    Movie selectedMovie1 = find(numRoom, Movie);
+                                    selectedMovie1.add(Movie);
+                                    break;
+                                case 3:
+                                    System.out.println("Has seleccionado la opcion 3, Cerrar Sesion");
+                                    Scanner out = new Scanner(System.in);
+                                    isAdmin = null;
+                                    isLoggedIn = false;
+
+                            } while (continuar);
 
 
-                            }
-                        } while (continuar);
-                    }
 
+                        }
+                    } while (continuar);
             }
+
         } while (continuar);
     }
+
+    private static Movie find(int numRoom, ArrayList<Movie> movie) {
+        for (int name1 = 0; name1 < movie.size(); ++name1) {
+            Movie movieAdmin = movie.get(name1);
+
+            if (movieAdmin.getName().equals(name1)) {
+                if (movieAdmin.getTime().equals(time)) {
+                    return movieAdmin;
+                }
+            }
+        }
+        return null;
+    }
+
 
     private static User login(String username, String password, ArrayList<User> Usuarios) {
         for (int username12 = 0; username12 < Usuarios.size(); ++username12) {
@@ -98,6 +124,18 @@ public class Main {
             if (UserAdmin.getUsername().equals(username12)) {
                 if (UserAdmin.getPassword().equals(password)) {
                     return UserAdmin;
+                }
+            }
+        }
+        return null;
+    }
+    private static Movie find(String name, int time, ArrayList<Movie> Peliculas) {
+        for (int name1 = 0; name1 < Peliculas.size(); ++name1) {
+            Movie movieAdmin = Peliculas.get(name1);
+
+            if (movieAdmin.getName().equals(name1)) {
+                if (movieAdmin.getTime().equals(time)) {
+                    return movieAdmin;
                 }
             }
         }
