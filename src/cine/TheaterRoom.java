@@ -8,9 +8,9 @@ public class TheaterRoom {
     int rows;
     int columns;
     ArrayList<Seats> seats = new ArrayList();
-    Movie movie;
+    ArrayList<Movie> movie = new ArrayList();
 
-    public TheaterRoom(int numRoom, Movie movie) {
+    public TheaterRoom(int numRoom, ArrayList<Movie> movie) {
         this.numRoom = numRoom;
         this.rows = 3;
         this.columns = 5;
@@ -22,6 +22,11 @@ public class TheaterRoom {
 
             }
         }
+    }
+
+    public static void add(TheaterRoom theaterRoom, String Movie) {
+
+
     }
 
     public Boolean thereIsASeat(int row, int column) {
