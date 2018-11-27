@@ -1,6 +1,4 @@
-import cine.Movie;
-import cine.TheaterRoom;
-import cine.User;
+import cine.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -83,27 +81,58 @@ public class Main {
                                     Scanner newAdminPeliculas = new Scanner(System.in);
                                     System.out.println("Seleccione una pelicula para estar en la sala");
                                     String selectedMovie = newAdminPeliculas.nextLine();
-                                    Movie selectedMovie1 = find(numRoom, Movie);
-                                    selectedMovie1.add(Movie);
+                                    TheaterRoom selectedMovie1 = find(numRoom, Movie);
+                                    selectedMovie1.add(TheaterRoom);
                                     break;
                                 case 3:
                                     System.out.println("Has seleccionado la opcion 3, Cerrar Sesion");
                                     Scanner out = new Scanner(System.in);
                                     isAdmin = null;
                                     isLoggedIn = false;
+                                    break;
 
                             } while (continuar);
 
 
 
-                        }
-                    } while (continuar);
+                        } while (continuar);
+                    } else if (!User.isLoggedin.getAdmin()) {
+                    isAdmin = false;
+                    do{
+                        int UserMenu = 0
+                        System.out.println("Menu Usuario");
+                        System.out.println("1. Comprar ticket");
+                        System.out.println("2. Cerrar Sesion");
+                        System.out.println("Escoga una opcion");
+                        switch (UserMenu) {
+                            case 1:
+                                System.out.println("Has seleccionado la opcion 1, Comprar tocket");
+                                Scanner salasUsuario = new Scanner(System.in);
+                                System.out.println(TheaterRoom);
+                                System.out.println("Que sala desea?");
+                                int TheaterRoom = salasUsuario.nextInt();
+                                System.out.println("Que asiento desea?");
+                                System.out.println(seats);
+                                int seats = salasUsuario.nextInt();
+                                Ticket.add(new Ticket(TheaterRoom, ArrayList<seats>));
+                                break;
+                            case 2:
+                                System.out.println("Has seleccionado la opcion 2, Cerrar Sesion");
+                                isAdmin = null;
+                                break
+                        } while (isAdmin);
+                    } while (isLoggedIn);
+                }
+                case 3:
+                    System.out.println("Has elegido la opcion 3, Salir");
+                    continuar = false;
+                    break;
             }
 
         } while (continuar);
     }
 
-    private static Movie find(int numRoom, ArrayList<Movie> movie) {
+    private static TheaterRoom find(int numRoom, ArrayList<Movie> movie) {
         for (int name1 = 0; name1 < movie.size(); ++name1) {
             Movie movieAdmin = movie.get(name1);
 
